@@ -1,0 +1,75 @@
+Simple Ticket Management System.
+................................
+
+This is a project I developed to demonstrate my skills in building RESTful APIs using Node.js and MongoDB. 
+this system manages the ticket the ticket. It create, read, update, delete. 
+
+Features......
+Create new support tickets.
+View a list of all tickets and a specific ticket by its unique ID.
+Update ticket details.
+Delete tickets.
+Input validation and error handling.
+
+Technologies I Used.....
+Node.js: To build the backend server.
+Express: To handle API routing.
+MongoDB: A NoSQL database for storing ticket data.
+Mongoose: As an ODM to interact with MongoDB.
+Thunder Client: For testing the API endpoints during development.
+
+Installation and Setup
+Prerequisites
+Node.js and npm installed on your machine.
+MongoDB (either locally installed or via MongoDB Atlas).
+How to Run the Project
+Clone the repository:
+
+bash.....
+Copy code......
+
+git clone https://github.com/yourusername/ticket-management.git
+cd ticket-management
+
+Install dependencies:
+open terminal
+Copy this code below:
+npm install
+
+Set up MongoDB:
+If using MongoDB Atlas, update the MongoDB connection string in the db.js file with your own credentials.
+Start the server:
+
+bash
+Copy code
+npm run dev   # Development mode with automatic reload (nodemon)
+The server will be running at http://localhost:3000.
+
+API Endpoints
+Here are the API endpoints I built:
+
+POST /tickets: Create a new ticket
+
+Sample Body:
+json
+Copy this code given below:
+{
+  "title": "Issue title",
+  "description": "Detailed description"
+}
+GET /tickets: Get all tickets
+
+GET /tickets/
+: Get a single ticket by ID
+
+PATCH /tickets/
+: Update a ticket's status or details
+
+Sample Body (to update status):
+json
+Copy code
+{
+  "status": "closed"
+}
+DELETE /tickets/
+: Delete a ticket by its unique ID
